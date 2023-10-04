@@ -93,10 +93,17 @@ class FacteursPremiersTest {
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
-    /*
     @Test
     void testGenerateForLargeNumber() {
         // Cas de nombre très grand
-        assertThat(FacteursPremiers.generate(1001)).containsExactlyInAnyOrderElementsOf(List.of(7, 11, 13));
-    }*/
+        int number = 1001;
+
+        actualResult = FacteursPremiers.generate(number);
+
+        expectedResult.add(7);
+        expectedResult.add(11);
+        expectedResult.add(13);
+
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
 }
