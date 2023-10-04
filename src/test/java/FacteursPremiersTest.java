@@ -65,13 +65,21 @@ class FacteursPremiersTest {
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
-    /*
     @Test
     void testGenerateForCompositeWithMultiplePrimes() {
         // Cas de nombre composé avec des facteurs premiers multiples
-        assertThat(FacteursPremiers.generate(12)).containsExactlyInAnyOrderElementsOf(List.of(2, 2, 3));
+        int number = 12;
+
+        actualResult = FacteursPremiers.generate(number);
+
+        expectedResult.add(2);
+        expectedResult.add(3);
+        expectedResult.add(2);
+
+        assertThat(actualResult).isEqualTo(expectedResult);
     }
 
+    /*
     @Test
     void testGenerateForCompositeWithMultiplePrimesAndRepeats() {
         // Cas de nombre composé avec des facteurs premiers multiples et répétés
