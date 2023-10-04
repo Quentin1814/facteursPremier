@@ -10,12 +10,14 @@ public class FacteursPremiers {
             return facteursPremiers; // Retourne une liste vide
         }
 
-        for (int diviseur = 2; diviseur <= nombre; diviseur++) {
-            if (nombre % diviseur != 0) {
-                break;
+        while (nombre != 1) {
+            for (int diviseur = 2; diviseur <= nombre; diviseur++) {
+                if (nombre % diviseur != 0) {
+                    break;
+                }
+                facteursPremiers.add(diviseur);
+                nombre /= diviseur;
             }
-            facteursPremiers.add(diviseur);
-            nombre /= diviseur;
         }
 
         /* VERSION GIGA CHAD

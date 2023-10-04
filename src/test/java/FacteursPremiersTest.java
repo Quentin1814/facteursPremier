@@ -51,7 +51,6 @@ class FacteursPremiersTest {
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
-    /*
     @Test
     void testGenerateForPowerOfPrime() {
         // Cas de nombre composé avec un facteur premier répété
@@ -60,10 +59,13 @@ class FacteursPremiersTest {
         actualResult = FacteursPremiers.generate(number);
 
         expectedResult.add(2);
+        expectedResult.add(2);
+        expectedResult.add(2);
 
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
+    /*
     @Test
     void testGenerateForCompositeWithMultiplePrimes() {
         // Cas de nombre composé avec des facteurs premiers multiples
