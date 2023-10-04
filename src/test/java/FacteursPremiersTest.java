@@ -38,7 +38,6 @@ class FacteursPremiersTest {
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
-    /*
     @Test
     void testGenerateForProductOfTwoPrimes() {
         // Cas de nombre composé avec deux facteurs premiers distincts
@@ -46,11 +45,13 @@ class FacteursPremiersTest {
 
         actualResult = FacteursPremiers.generate(number);
 
-        expectedResult.add(2, 3);
+        expectedResult.add(2);
+        expectedResult.add(3);
 
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
+    /*
     @Test
     void testGenerateForPowerOfPrime() {
         // Cas de nombre composé avec un facteur premier répété

@@ -8,10 +8,14 @@ public class FacteursPremiers {
         // Cas de base : nombre égal à 1
         if (nombre == 1) {
             return facteursPremiers; // Retourne une liste vide
-        } else if (nombre == 2) { // Cas nombre égal à 2
-            facteursPremiers.add(2);
-        } else if (nombre == 3) {
-            facteursPremiers.add(3);
+        }
+
+        for (int diviseur = 2; diviseur <= nombre; diviseur++) {
+            if (nombre % diviseur != 0) {
+                break;
+            }
+            facteursPremiers.add(diviseur);
+            nombre /= diviseur;
         }
 
         /* VERSION GIGA CHAD
