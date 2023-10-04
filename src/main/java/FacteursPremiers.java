@@ -10,17 +10,6 @@ public class FacteursPremiers {
             return facteursPremiers; // Retourne une liste vide
         }
 
-        while (nombre != 1) {
-            for (int diviseur = 2; diviseur <= nombre; diviseur++) {
-                if (nombre % diviseur != 0) {
-                    break;
-                }
-                facteursPremiers.add(diviseur);
-                nombre /= diviseur;
-            }
-        }
-
-        /* VERSION GIGA CHAD
         // Trouver les facteurs premiers
         for (int diviseur = 2; diviseur <= nombre; diviseur++) {
             while (nombre % diviseur == 0) {
@@ -28,7 +17,7 @@ public class FacteursPremiers {
                 nombre /= diviseur;
             }
         }
-        */
+
         return facteursPremiers;
     }
 }

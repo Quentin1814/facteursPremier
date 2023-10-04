@@ -73,19 +73,27 @@ class FacteursPremiersTest {
         actualResult = FacteursPremiers.generate(number);
 
         expectedResult.add(2);
-        expectedResult.add(3);
         expectedResult.add(2);
+        expectedResult.add(3);
+
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    void testGenerateForCompositeWithMultiplePrimesAndRepeats() {
+        // Cas de nombre composé avec des facteurs premiers multiples et répétés
+        int number = 18;
+
+        actualResult = FacteursPremiers.generate(number);
+
+        expectedResult.add(2);
+        expectedResult.add(3);
+        expectedResult.add(3);
 
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
     /*
-    @Test
-    void testGenerateForCompositeWithMultiplePrimesAndRepeats() {
-        // Cas de nombre composé avec des facteurs premiers multiples et répétés
-        assertThat(FacteursPremiers.generate(18)).containsExactlyInAnyOrderElementsOf(List.of(2, 3, 3));
-    }
-
     @Test
     void testGenerateForLargeNumber() {
         // Cas de nombre très grand
